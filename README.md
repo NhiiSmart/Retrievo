@@ -8,7 +8,7 @@
 
 ##  Live Application & Repository Links
 * **GitHub Repository:** (https://github.com/NhiiSmart/Retrievo.git)
-* **Live Web Application:** `http://<YOUR-EC2-PUBLIC-IP>`
+* **Live Web Application:** `http://13.51.159.174`
 
 ---
 
