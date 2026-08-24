@@ -6,13 +6,13 @@
 
 ---
 
-##  Live Application & Repository Links
+## Live Application & Repository Links
 * **GitHub Repository:** (https://github.com/NhiiSmart/Retrievo.git)
 * **Live Web Application:** `http://13.51.159.174`
 
 ---
 
-## 👥 Group Members & Roles
+## Group Members & Roles
 * **Frontend Developer:** UI Component Architecture, Form Validation, React Dropzone & Toast Integration
 * **Backend Developer:** Node.js/Express REST APIs, Presigned S3 URL Generation, Authentication Routes
 * **Cloud Architect / DevOps:** AWS EC2 Provisioning, Security Groups, S3 CORS Configuration, CloudWatch Monitoring
@@ -21,7 +21,7 @@
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 
 ### **Frontend & Backend**
 * **Frontend:** React.js (Vite), Tailwind CSS, React Router, React Dropzone
