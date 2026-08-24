@@ -7,7 +7,7 @@
 ---
 
 ##  Live Application & Repository Links
-* **GitHub Repository:** [https://github.com/your-username/lost-found-portal](https://github.com/your-username/lost-found-portal)
+* **GitHub Repository:** [[https://github.com/your-username/lost-found-portal](https://github.com/your-username/lost-found-portal](https://github.com/NhiiSmart/Retrievo.git))
 * **Live Web Application:** `http://<YOUR-EC2-PUBLIC-IP>`
 
 ---
