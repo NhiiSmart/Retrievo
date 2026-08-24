@@ -15,7 +15,7 @@ app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Lost & Found API is running' });
+  res.json({ status: 'ok', message: 'Retrievo API is running' });
 });
 
 app.use('/api/auth', authRoutes);

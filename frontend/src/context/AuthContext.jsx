@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
     if (token) {
       authService
         .getCurrentUser()
-        .then(({ data }) => setUser(data))
+        .then(({ data }) => setUser(data.user))
         .catch(() => {
           localStorage.removeItem('token');
           setUser(null);

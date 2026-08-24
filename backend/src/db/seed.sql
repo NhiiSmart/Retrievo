@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS lost_found_db;
-USE lost_found_db;
+CREATE DATABASE IF NOT EXISTS retrievo_db;
+USE retrievo_db;
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,

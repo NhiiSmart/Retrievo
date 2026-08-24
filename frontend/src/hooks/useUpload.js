@@ -27,11 +27,14 @@ export const useUpload = () => {
     try {
       const compressedFile = await compressImage(file);
 
-      const { data } = await uploadService.getPresignedUrl(
+      // Handle both raw response or Axios-wrapped response
+      const response = await uploadService.getPresignedUrl(
         compressedFile.name,
         compressedFile.type
       );
+      const data = response.data || response;
 
+      // Direct PUT request to S3 using the presigned URL
       const uploadResponse = await fetch(data.url, {
         method: 'PUT',
         body: compressedFile,
@@ -41,10 +44,17 @@ export const useUpload = () => {
       });
 
       if (!uploadResponse.ok) {
-        throw new Error('Upload failed');
+        throw new Error('Upload to S3 failed');
       }
 
-      const imageUrl = `${data.bucket}/${data.key}`;
+      // Format clean, full HTTPS URL for the web browser
+      let imageUrl = data.imageUrl || data.publicUrl;
+      
+      if (!imageUrl) {
+        const cleanKey = data.key.startsWith('/') ? data.key.slice(1) : data.key;
+        imageUrl = `https://${data.bucket || 'retrievo-item-photo'}.s3.amazonaws.com/${cleanKey}`;
+      }
+
       toast.success('Image uploaded successfully!');
       return imageUrl;
     } catch (error) {
